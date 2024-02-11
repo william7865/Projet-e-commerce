@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <title> produit1</title>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <link rel="stylesheet" href="../css/produit1.css">
+    </body>
+    <head>
+        <header>
+            <div class="header-content">
+                <div class="slogan">
+                        <img src="https://img.freepik.com/vecteurs-premium/conception-icone-logo-magasin-panier-modele-vecteur-illustration-panier-achat_487414-1143.jpg" alt="Slogan en Image" class="slogan-image">
+                </div>
+    
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Rechercher...">
+                    <button onclick="search()">
+                        <img src="https://icones.pro/wp-content/uploads/2021/06/icone-loupe-noir.png" width="50">
+                    </button>
+                </div>
+    
+                <div class="right-links">
+                    <a href="#" id="panier">
+                        <img src="https://cdn-icons-png.flaticon.com/512/117/117641.png" width="50">
+                    </a>
+                    <a href="#" id="favoris">
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/001/187/989/small/heart.png" width="50">
+                    </a>
+                    <a href="#" id="compte">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2354/2354573.png" width="50">
+                    </a>
+                </div>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li>
+                    <select id="categorie1" name="categorie1">
+                        <option disabled="" selected="">Categorie1</option>
+                        <optgroup label="forme">
+                            <option value="1">sous categorie1</option>
+                            <option value="2">sous categorie1</option>
+                            <option value="3">sous categorie1</option>
+                            <option value="4">sous categorie1</option>
+                            <option value="5">sous categorie1</option>
+                         </optgroup>
+                         <optgroup label="couleur">
+                            <option value="6">sous categorie1</option>
+                            <option value="7">sous categorie1</option>
+                            <option value="8">sous categorie1</option>
+                            <option value="9">sous categorie1</option>
+                         </optgroup>
+                    </select>
+                </li>
+    
+                <select id="categorie2" name="categorie2">
+                    <option disabled="" selected="">Categorie2</option>
+                    <optgroup label="forme">
+                        <option value="1">sous categorie1</option>
+                        <option value="2">sous categorie1</option>
+                        <option value="3">sous categorie1</option>
+                        <option value="4">sous categorie1</option>
+                        <option value="5">sous categorie1</option>
+                     </optgroup>
+                     <optgroup label="couleur">
+                        <option value="6">sous categorie1</option>
+                        <option value="7">sous categorie1</option>
+                        <option value="8">sous categorie1</option>
+                        <option value="9">sous categorie1</option>
+                     </optgroup>
+                </select>
+            </li>
+    
+            <select id="categorie3" name="categorie3">
+                <option disabled="" selected="">Categorie3</option>
+                <optgroup label="forme">
+                    <option value="1">sous categorie1</option>
+                    <option value="2">sous categorie1</option>
+                    <option value="3">sous categorie1</option>
+                    <option value="4">sous categorie1</option>
+                    <option value="5">sous categorie1</option>
+                 </optgroup>
+                 <optgroup label="couleur">
+                    <option value="6">sous categorie1</option>
+                    <option value="7">sous categorie1</option>
+                    <option value="8">sous categorie1</option>
+                    <option value="9">sous categorie1</option>
+                 </optgroup>
+            </select>
+        </li>
+    
+            </ul>
+        </nav>
+        <article>
+            <img src="../image/bijoux 2.jpg">
+            <h1>Description</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam odit nemo, sint laboriosam error, repellendus quibusdam quasi atque doloremque totam, at fugiat quos? Temporibus quisquam laboriosam eaque, nam porro vel?</p>
+        </article>
+        <section>
+            <div class="article-info">
+                <h1>Chaussettes hiver(oteil)</h1>
+                <p class="price">2.90€</p>
+    
+                <!-- Choisir le nombre d'articles -->
+                <label for="quantity">Quantité:</label>
+                <input type="number" id="quantity" min="1" value="1">
+                
+                <!-- Ajouter au panier -->
+                <button onclick="addToCart()">🛒</button>
+    
+                <!-- Ajouter aux favoris -->
+                <button id="favoriteButton" onclick="addToFavorites()">🤍</button>
+    
+    
+    
+                <!-- Appréciation des clients et possibilité de noter -->
+                <h2>Appréciation</h2>
+                <div id="userRating" class="ratings">
+                    <div class="ratings">
+                        <span class="rating" onclick="rateProduct(1)">☆</span>
+                        <span class="rating" onclick="rateProduct(2)">☆</span>
+                        <span class="rating" onclick="rateProduct(3)">☆</span>
+                        <span class="rating" onclick="rateProduct(4)">☆</span>
+                        <span class="rating" onclick="rateProduct(5)">☆</span>
+                    </div>
+                </div>
+    
+                <!-- Commentaires des clients -->
+                <div class="comments">
+                    <h2>Commentaires Clients</h2>
+                    <ul id="commentsList">
+                        <!-- Les commentaires seront ajoutés dynamiquement ici avec JavaScript -->
+                    </ul>
+                    <textarea id="commentInput" placeholder="Ajouter un commentaire"></textarea>
+                    <button onclick="addComment()">Commenter</button>
+                    
+                </div>
+    
+                <!-- Mode de paiement et temps de livraison -->
+                <div class="payment-section">
+                    <h2>Mode de Paiement et Livraison</h2>
+                    <label for="paymentMethod">Choix du Paiement:</label>
+                    <select id="paymentMethod">
+                        <option value="card">Carte de Crédit</option>
+                        <option value="paypal">PayPal</option>
+                       
+                    </select>
+    
+                    <label for="deliveryTime">Temps de Livraison:</label>
+                    <select id="deliveryTime">
+                        <option value="standard">Standard (3-5 jours)</option>
+                        <option value="express">Express (1-2 jours)</option>
+              
+                    </select>
+    
+    
+                    <a href="../html/payement.html">
+                    <button onclick="proceedToPayment()">Procéder au Paiement</button></a>
+                </div>
+            </div>
+        </div>
+    
+        <button data-testid="share-button" class="ProductPage__ProductActionIcon-bsb8m8-10 ShareButton__ShareButtonWrapper-qb4ygn-1 gPpeHs HedYn"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="_296_undefined_" style="height: 24px; width: 24px;"><path d="M4 11v8a2 2 0 002 2h12a2 2 0 002-2v-8m-4-4l-4-4m0 0L8 7m4-4v13" stroke="#0E161C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" id="_296_undefined_"></path></svg></button>
+        <path d="M4 11v8a2 2 0 002 2h12a2 2 0 002-2v-8m-4-4l-4-4m0 0L8 7m4-4v13" stroke="#0E161C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" id="_296_undefined_"></path>
+        
+        </section>
+        <footer>
+            <div>
+                <div class="contenu-footer">
+    
+                  <div class="bloc footer-contact">
+                    <h3>Restons en contact</h3>
+                    <p>06 21 25 38 44</p>
+                    <p>supportclient@contact.com</p>
+                    <p>  Suivez nous sur instagram @jewelry et twitter @jewelry</p>
+                    <p>34 rue de la liberté, Paris, 93311</p>
+                  </div>
+        
+                <p class="copyright">Company Name © 2023 </p>
+        
+         </div>
+            </div>
+    
+    
+    
+    
+       
+    
+    
+    
+    
+    
+            <small>© 2024. Tous droits réservés.</small>
+        </footer>
+    </head>
+</html>
