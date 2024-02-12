@@ -101,10 +101,6 @@ section button{
     font-size: 16px;
 }
 
-section:hover{
-    transition: 2s #fff;
-}
-
 .payment-section{
     display: grid;
     width: 30%;
