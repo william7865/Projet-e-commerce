@@ -5,7 +5,18 @@
 }
 
 header{
-    background-color:  rgba(58, 36, 51, 0.5);;
+    background-color:  rgba(58, 36, 51, 0.5);
+}
+
+h1{
+    text-align: center;
+    font-size: 42px;
+    height: 60px;
+    min-width: 200px;
+    bottom: 12px;
+    font-family: Impact, fantasy;
+    margin: 7px;
+    
 }
 
 .header-content {
@@ -19,11 +30,12 @@ header{
     flex: 1; 
     text-align: left;
     display: inline-flex;
+    margin: 5px;
     
 }
 
 .slogan-image {
-    max-width: 80px;
+    max-width: 70px;
 }
 
 .search-bar {
@@ -79,7 +91,53 @@ select {
     padding: 8px;
 }
 
+section button{
+    flex: 1;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 16px;
+}
 
+section:hover{
+    transition: 2s #fff;
+}
 
+.payment-section{
+    display: grid;
+    width: 30%;
+    text-align: center;
+    margin-left: 35%;
+    margin-right: 50%;
+}
 
+option{
+    text-align: center; 
+}
+
+label{
+    margin: 5%;
+    font-size: 20px;
+}
+
+.payment-section button{
+    margin: 40px;
+    width: 50%;
+    margin-left: 27%;
+    margin-right: 50%;
+    flex: 1;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid;
+    padding: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+h2{
+    font-size: 26px;
+    font-family: Impact, fantasy;
+}
 
