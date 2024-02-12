@@ -50,13 +50,7 @@
     <h1>Panier</h1>
 
     <section>
-      <button onclick="removeFromCart({id: '1', price: 10, name: 'Salut'})">
-        Supp
-      </button>
-      <button onclick="clearCart()">clear</button>
-      <button onclick="getTotals()">Total</button>
-      <!-- Afficher le panier ici -->
-      <div id="cart-container"></div>
+
     </section>
 
     <div class="payment-section">
@@ -76,10 +70,8 @@
 
       <button onclick="proceedToPayment()">Procéder au Paiement</button>
     </div>
-
     <script>
-      // Appel de la fonction pour afficher les articles dans le panier
-      renderCartItems(getCart());
+
     </script>
   </body>
 </html>
