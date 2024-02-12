@@ -1,4 +1,3 @@
-const sum = require('./render-cart');
 javascript
 // Test file imports
 import '@testing-library/jest-dom';

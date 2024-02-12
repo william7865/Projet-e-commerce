@@ -1,5 +1,4 @@
-// sum.test.js
-const sum = require('./cart'); // Utilisation du chemin relatif sans extension
+
 javascript
 import { getCart, addToCart, removeFromCart, clearCart, getTotals } from './cartFunctions'; // Importing functions from cartFunctions file (assuming the code is in cartFunctions.js)
 import localStorage from 'jest-localstorage-mock'; // Mocking localStorage
