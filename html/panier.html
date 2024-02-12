@@ -1,96 +1,73 @@
 <!DOCTYPE html>
-<html>
-    <body>
-        <title>Mon panier</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/panier.css">
-    </body>
-    <head>
-        <header>
-            <div class="header-content">
-                <div class="slogan">
-                        <img src="https://img.freepik.com/vecteurs-premium/conception-icone-logo-magasin-panier-modele-vecteur-illustration-panier-achat_487414-1143.jpg" alt="Slogan en Image" class="slogan-image">
-                </div>
-    
-                <div class="search-bar">
-                    <input type="text" id="search-input" placeholder="Rechercher...">
-                    <button onclick="search()">
-                        <img src="https://icones.pro/wp-content/uploads/2021/06/icone-loupe-noir.png" width="50">
-                    </button>
-                </div>
-    
-                <div class="right-links">
-                    <a href="#" id="favoris">
-                        <img src="https://static.vecteezy.com/system/resources/thumbnails/001/187/989/small/heart.png" width="50">
-                    </a>
-                    <a href="#" id="compte">
-                        <img src="https://cdn-icons-png.flaticon.com/512/2354/2354573.png" width="50">
-                    </a>
-                </div>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon panier</title>
+    <link rel="stylesheet" href="../css/panier.css">
+    <script src="../src/cart.js"></script>
+    <script src="../src/render-cart.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="slogan">
+                <img src="https://img.freepik.com/vecteurs-premium/conception-icone-logo-magasin-panier-modele-vecteur-illustration-panier-achat_487414-1143.jpg"
+                    alt="Slogan en Image" class="slogan-image">
             </div>
-        </header>
-        <nav class="categories-nav">
-            <ul>
-                <li>
-                    <select id="categorie1" name="categorie1">
-                        <option disabled="" selected="">Categorie1</option>
-                        <optgroup label="forme">
-                            <option value="1">sous categorie1</option>
-                            <option value="2">sous categorie1</option>
-                            <option value="3">sous categorie1</option>
-                            <option value="4">sous categorie1</option>
-                            <option value="5">sous categorie1</option>
-                         </optgroup>
-                         <optgroup label="couleur">
-                            <option value="6">sous categorie1</option>
-                            <option value="7">sous categorie1</option>
-                            <option value="8">sous categorie1</option>
-                            <option value="9">sous categorie1</option>
-                         </optgroup>
-                    </select>
-                </li>
-    
-                <select id="categorie2" name="categorie2">
-                    <option disabled="" selected="">Categorie2</option>
-                    <optgroup label="forme">
-                        <option value="1">sous categorie1</option>
-                        <option value="2">sous categorie1</option>
-                        <option value="3">sous categorie1</option>
-                        <option value="4">sous categorie1</option>
-                        <option value="5">sous categorie1</option>
-                     </optgroup>
-                     <optgroup label="couleur">
-                        <option value="6">sous categorie1</option>
-                        <option value="7">sous categorie1</option>
-                        <option value="8">sous categorie1</option>
-                        <option value="9">sous categorie1</option>
-                     </optgroup>
-                </select>
-            </li>
-    
-            <select id="categorie3" name="categorie3">
-                <option disabled="" selected="">Categorie3</option>
-                <optgroup label="forme">
-                    <option value="1">sous categorie1</option>
-                    <option value="2">sous categorie1</option>
-                    <option value="3">sous categorie1</option>
-                    <option value="4">sous categorie1</option>
-                    <option value="5">sous categorie1</option>
-                 </optgroup>
-                 <optgroup label="couleur">
-                    <option value="6">sous categorie1</option>
-                    <option value="7">sous categorie1</option>
-                    <option value="8">sous categorie1</option>
-                    <option value="9">sous categorie1</option>
-                 </optgroup>
-            </select>
-        </li>
-    
-            </ul>
-        </nav>
-        
-        <h1><p><br>Vous n'avez aucun article dans votre panier</br></p>
-    
-    </head>
+
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Rechercher...">
+                <button onclick="search()">
+                    <img src="https://icones.pro/wp-content/uploads/2021/06/icone-loupe-noir.png" width="50">
+                </button>
+            </div>
+
+            <div class="right-links">
+                <a href="#" id="favoris">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/001/187/989/small/heart.png"
+                        width="50">
+                </a>
+                <a href="#" id="compte">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2354/2354573.png" width="50">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <h1>Panier</h1>
+
+    <section>
+        <!-- Afficher le panier ici -->
+        <div id="cart-container"></div>
+    </section>
+
+    <div class="payment-section">
+        <h2>Mode de Paiement et Livraison</h2>
+
+        <label for="paymentMethod">Choix du Paiement:</label>
+        <select id="paymentMethod">
+            <option value="card">Carte de Crédit</option>
+            <option value="paypal">PayPal</option>
+        </select>
+
+        <label for="deliveryTime">Temps de Livraison:</label>
+        <select id="deliveryTime">
+            <option value="standard">Standard (3-5 jours)</option>
+            <option value="express">Express (1-2 jours)</option>
+        </select>
+
+        <button onclick="proceedToPayment()">Procéder au Paiement</button>
+    </div>
+
+    <script>
+        // Appel de la fonction pour afficher les articles dans le panier
+        renderCartItems(getCart());
+    </script>
+
+</body>
+
 </html>
