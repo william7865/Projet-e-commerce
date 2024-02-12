@@ -26,7 +26,10 @@ nav ul {
 article{
     width: 50%;
 }
-
+#commentInput{
+    width: 50%;
+    height: 150px;
+}
 article img{
     width: 100%
 }
