@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+body {
+  width: 100%;
+}
+
+form {
+  background-color: rgb(255, 109, 194);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 45%;
+  margin-top: 10%;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-size: 15px;
+}
+
+input {
+  width: 50%;
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: white;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(215, 166, 206);
+  transition: 0.5s;
+}
