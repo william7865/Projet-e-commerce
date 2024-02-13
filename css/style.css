@@ -36,7 +36,8 @@ main{
 }
 
 main article{ 
-    border: 1px solid #222; 
+    border: 1mm ridge rgba(86, 65, 82, 0.599);
+    border-radius: 20%;
     justify-content: space-between;
 }
 
@@ -121,7 +122,6 @@ a {
     margin-top: 10px;
 }
 
-
 .categories-nav {
     margin-top: 20px;
 }
@@ -140,8 +140,4 @@ a {
 select {
     padding: 8px;
 }
-
-
-
-
 
