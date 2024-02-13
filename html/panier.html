@@ -1,77 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon panier</title>
-    <link rel="stylesheet" href="../css/panier.css" />
+    <link rel="stylesheet" href="../css/panier.css">
     <script src="../src/cart.js"></script>
     <script src="../src/render-cart.js"></script>
-  </head>
+</head>
 
-  <body>
+<body>
+
     <header>
-      <div class="header-content">
-        <div class="slogan">
-          <img
-            src="https://img.freepik.com/vecteurs-premium/conception-icone-logo-magasin-panier-modele-vecteur-illustration-panier-achat_487414-1143.jpg"
-            alt="Slogan en Image"
-            class="slogan-image"
-          />
-        </div>
+        <div class="header-content">
+            <div class="slogan">
+                <img src="https://img.freepik.com/vecteurs-premium/conception-icone-logo-magasin-panier-modele-vecteur-illustration-panier-achat_487414-1143.jpg"
+                    alt="Slogan en Image" class="slogan-image">
+            </div>
 
-        <div class="search-bar">
-          <input type="text" id="search-input" placeholder="Rechercher..." />
-          <button onclick="search()">
-            <img
-              src="https://icones.pro/wp-content/uploads/2021/06/icone-loupe-noir.png"
-              width="50"
-            />
-          </button>
-        </div>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Rechercher...">
+                <button onclick="search()">
+                    <img src="https://icones.pro/wp-content/uploads/2021/06/icone-loupe-noir.png" width="50">
+                </button>
+            </div>
 
-        <div class="right-links">
-          <a href="#" id="favoris">
-            <img
-              src="https://static.vecteezy.com/system/resources/thumbnails/001/187/989/small/heart.png"
-              width="50"
-            />
-          </a>
-          <a href="#" id="compte">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/2354/2354573.png"
-              width="50"
-            />
-          </a>
+            <div class="right-links">
+                <a href="#" id="favoris">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/001/187/989/small/heart.png"
+                        width="50">
+                </a>
+                <a href="#" id="compte">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2354/2354573.png" width="50">
+                </a>
+            </div>
         </div>
-      </div>
     </header>
 
     <h1>MON PANIER</h1>
 
     <section>
-
+        <button onclick="removeFromCart({id: '1', price: 10, name: 'Salut'})">Supp</button>
+        <button onclick="clearCart()">clear</button>
+        <button onclick="getTotals()">Total</button>
+        <!-- Afficher le panier ici -->
+        <div id="cart-container"></div>
     </section>
 
     <div class="payment-section">
-      <h2>Mode de Paiement et Livraison</h2>
+        <h2>Mode de Paiement et Livraison</h2>
 
-      <label for="paymentMethod">Choix du Paiement:</label>
-      <select id="paymentMethod">
-        <option value="card">Carte de Crédit</option>
-        <option value="paypal">PayPal</option>
-      </select>
+        <label for="paymentMethod">Choix du Paiement:</label>
+        <select id="paymentMethod">
+            <option value="card">Carte de Crédit</option>
+            <option value="paypal">PayPal</option>
+        </select>
 
-      <label for="deliveryTime">Temps de Livraison:</label>
-      <select id="deliveryTime">
-        <option value="standard">Standard (3-5 jours)</option>
-        <option value="express">Express (1-2 jours)</option>
-      </select>
+        <label for="deliveryTime">Temps de Livraison:</label>
+        <select id="deliveryTime">
+            <option value="standard">Standard (3-5 jours)</option>
+            <option value="express">Express (1-2 jours)</option>
+        </select>
 
-      <button onclick="proceedToPayment()">Procéder au Paiement</button>
+        <button onclick="proceedToPayment()">Procéder au Paiement</button>
     </div>
     <script>
-
+        
+        renderCartItems(getCart());
     </script>
-  </body>
+
+</body>
+
 </html>
