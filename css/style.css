@@ -115,3 +115,23 @@ a {
 .slogan, .search-bar, .right-links {
     margin-top: 10px;
 }
+
+.categories-nav {
+    margin-top: 20px;
+}
+
+.categories-nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.categories-nav li {
+    text-align: center;
+}
+
+select {
+    padding: 8px;
+}
+
