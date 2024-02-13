@@ -1,16 +1,23 @@
 *{
-    margin: 0;
-    padding: 0;
-    min-height: 3em
+    margin: 0%;
+    padding: 0%;
+    min-height: 3em;
 }
 
-body{
-    display: flex;
-    flex-wrap: wrap;
-}
+
 header{
     background-color:  rgba(58, 36, 51, 0.5);
-    width: 100%;
+}
+
+h1{
+    text-align: center;
+    font-size: 42px;
+    height: 60px;
+    min-width: 200px;
+    bottom: 12px;
+    font-family: Impact, fantasy;
+    margin: 7px;
+    
 }
 
 nav{
@@ -56,11 +63,12 @@ footer {
     flex: 1; 
     text-align: left;
     display: inline-flex;
+    margin: 5px;
     
 }
 
 .slogan-image {
-    max-width: 80px;
+    max-width: 70px;
 }
 
 .search-bar {
