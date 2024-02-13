@@ -103,6 +103,10 @@ section button{
     float:right;
     margin: 5px;
     width: 5%;
+    cursor: pointer;
+}
+section button:hover{
+    background-color: #afa2a2;
 }
 
 .payment-section{
@@ -134,6 +138,10 @@ label{
     padding: 0.5rem;
     text-align: center;
     text-decoration: none;
+    cursor: pointer;
+}
+.payment-section button:hover {
+    background-color: #737171;
 }
 
 h2{
